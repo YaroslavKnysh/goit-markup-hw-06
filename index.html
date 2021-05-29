@@ -24,31 +24,66 @@
             <use href="./images/modalclose.svg#icon-modalclose-1"></use>
           </svg>
         </button>
-        <div>
-        </div><p>Оставьте свои данные, мы вам перезвоним</p>
-        <form>
-          <label for="user-name">Имя</label>
-          <input  type="name"
-                name="name"
-                id="user-name" >
-               <label for="user-tel">Телефон</label>
-          <input  type="name"
-                name="name"
-                id="user-tel" >
-                <label for="user-mail">Почта</label>
-          <input  type="name"
-                name="name"
-                id="user-mail" >
-                <label for="user-name">Имя</label>
-          <input  type="name"
-                name="name"
-                id="user-name" > 
-                <label for="user-comment">Комментарий</label>
-                <textarea name="comment" id="user-comment" cols="30" rows="10" placeholder="Введите текст"></textarea>
-                <input type="checkbox" name="policy" id="policy">
-                <label for="policy">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></label>
-                <button type="submit">Отправить</button>
-        </form>
+        <div class="modal-form-container">
+          <p class="modal-form-title">
+            Оставьте свои данные, мы вам перезвоним
+          </p>
+          <form class="modal-form">
+            <label class="modal-form-name-label modal-label" for="user-name"
+              >Имя</label
+            >
+            <input
+              class="modal-form-name-input"
+              type="text"
+              name="name"
+              id="user-name"
+            />
+            <label class="modal-form-tel-label modal-label" for="user-tel"
+              >Телефон</label
+            >
+            <input
+              class="modal-form-tel-input"
+              type="tel"
+              name="tel"
+              id="user-tel"
+            />
+            <label class="modal-form-mail-label modal-label" for="user-mail"
+              >Почта</label
+            >
+            <input
+              class="modal-form-mail-input"
+              type="email"
+              name="mail"
+              id="user-mail"
+            />
+
+            <label
+              class="modal-form-comment-label modal-label"
+              for="user-comment"
+              >Комментарий</label
+            >
+            <textarea
+              class="modal-form-comment-area"
+              name="comment"
+              id="user-comment"
+              cols="30"
+              rows="10"
+              placeholder="Введите текст"
+            ></textarea>
+            <input
+              class="modal-form-policy-input"
+              type="checkbox"
+              name="policy"
+              id="policy"
+            />
+            <label class="modal-form-policy-label" for="policy"
+              >Соглашаюсь с рассылкой и принимаю
+              <a class="modal-form-policy-link" href=""
+                >Условия договора</a
+              ></label
+            >
+            <button class="modal-button-submit" type="submit">Отправить</button>
+          </form>
         </div>
       </div>
     </div>
