@@ -303,7 +303,10 @@ ul {
   margin-right: 12px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
-
+.subscribe-input-form:hover,
+.subscribe-input-form:focus {
+  outline: none;
+}
 .subscribe-button {
   display: inline-flex;
   align-items: center;
@@ -399,9 +402,50 @@ ul {
   display: flex;
   flex-direction: column;
 }
+.modal-form-name-input-container {
+  position: relative;
+}
+.modal-form-name-icon {
+  position: absolute;
+  top: 16px;
+  left: 14px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-input:focus + .modal-form-name-icon,
+.modal-form-input:hover + .modal-form-name-icon {
+  fill: var(--text-link-selection);
+}
+.modal-form-tel-input-container {
+  position: relative;
+}
+.modal-form-tel-icon {
+  position: absolute;
+  top: 16px;
+  left: 14px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-input:focus + .modal-form-tel-icon,
+.modal-form-input:hover + .modal-form-tel-icon {
+  fill: var(--text-link-selection);
+}
+.modal-form-mail-input-container {
+  position: relative;
+}
+.modal-form-mail-icon {
+  position: absolute;
+  top: 16px;
+  left: 14px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-input:focus + .modal-form-mail-icon,
+.modal-form-input:hover + .modal-form-mail-icon {
+  fill: var(--text-link-selection);
+}
+
 .modal-form-name-input,
 .modal-form-tel-input,
 .modal-form-mail-input {
+  width: 448px;
   height: 40px;
   margin-top: 4px;
   margin-bottom: 10px;
@@ -413,9 +457,11 @@ ul {
   cursor: pointer;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .modal-form-input:focus,
 .modal-form-input:hover {
   border: 1px solid #2196f3;
+  outline: none;
 }
 
 .modal-form-label {
@@ -439,14 +485,16 @@ ul {
   background-image: url(../images/checkbox-empty.svg);
   margin-right: 7px;
   cursor: pointer;
+  transition: background-image 50ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-radius 50ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-form-policy-input {
+.modal-form-policy-checkbox {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
-.modal-form-policy-input:checked + .modal-form-policy-label::before {
+.modal-form-policy-checkbox:checked + .modal-form-policy-label::before {
   background-image: url(../images/checkbox-checked.svg);
   border-radius: 2px;
 }
